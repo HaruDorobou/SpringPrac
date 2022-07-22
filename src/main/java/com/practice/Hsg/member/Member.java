@@ -1,20 +1,48 @@
 package com.practice.Hsg.member;
 
-import lombok.RequiredArgsConstructor;
-
-@RequiredArgsConstructor // Getter, Setter
 public class Member {
 
     /**
      * Member Object Structure
-     *
-     * Getter, Setter -> Lombok
      */
 
-    private long id; // unique
+    private Long id; // unique
     private String name;
-    private Grade grade;
     private String joinDate;
+    private Grade grade;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Grade getGrade() {
+        return grade;
+    }
+
+    public void setGrade(Grade grade) {
+        this.grade = grade;
+    }
+
+    public String getJoinDate() {
+        return joinDate;
+    }
+
+    public void setJoinDate(String joinDate) {
+        this.joinDate = joinDate;
+    }
+
 
     // END LINE
 }

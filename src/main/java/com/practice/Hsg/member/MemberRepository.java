@@ -2,8 +2,8 @@ package com.practice.Hsg.member;
 
 public interface MemberRepository {
 
-    void save();
-    void findMemberById();
+    void save(Member member);
+    Member findMemberById(Long id);
 
     // END LINE
 }
