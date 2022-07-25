@@ -1,11 +1,10 @@
 package com.practice.Hsg.discount;
 
+import com.practice.Hsg.annotation.MainDiscountPolicy;
 import com.practice.Hsg.member.Member;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 
-@Component
-@Qualifier("fixDiscountPolicy")
+// @Component
+// @MainDiscountPolicy
 public class FixDiscountPolicy implements DiscountPolicy {
     @Override
     public int discount(Member member, int price) {

@@ -1,0 +1,21 @@
+package com.practice.Hsg.scan;
+
+import com.practice.Hsg.AutoAppConfig;
+import com.practice.Hsg.member.MemberService;
+import org.junit.jupiter.api.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class ComponentScanTest {
+
+    @Test
+    void basicScan() {
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class);
+
+        MemberService memberService = ac.getBean(MemberService.class);
+
+        assertThat(memberService).isInstanceOf(MemberService.class);
+        // 설정정보와 의존관계 주입 테스트
+    }
+}

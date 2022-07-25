@@ -1,15 +1,16 @@
 package com.practice.Hsg.discount;
 
+import com.practice.Hsg.annotation.MainDiscountPolicy;
 import com.practice.Hsg.member.Grade;
 import com.practice.Hsg.member.Member;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("rateDiscountPolicy")
+@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy {
 
-    int discountPercent;
+    private int discountPercent = 10;
 
     @Override
     public int discount(Member member, int price) {
